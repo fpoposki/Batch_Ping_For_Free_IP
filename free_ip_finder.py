@@ -10,7 +10,7 @@ free_ip_list = []
 while True:
     try:
         ip_range = int(input("\n Please enter IP range "))
-        if  ip_range <= 255 and ip_range > 0:
+        if  ip_range <= 255 and ip_range >= 0:
             print("You entered a valid range")
         else:
             print("INVALID RANGE")
@@ -25,7 +25,7 @@ while True:
 while True:
     try:
         ip_count = int(input("\n How many free adresses do you need "))
-        while  ip_count >= 255 or ip_count < 0:
+        while  ip_count >= 255 or ip_count =< 0:
             print("INVALID ENTRY (enter number between 0-255)")
             ip_count = int(input("\n INVALID ENTRY. PLEASE TRY AGAIN "))     
     except:
